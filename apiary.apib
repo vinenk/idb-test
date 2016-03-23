@@ -1,0 +1,123 @@
+FORMAT: 1A
+HOST: http://www.tipsyturkey.me/
+
+# TipsyTurkey API
+
+TipsyTurkey API is a simple API that provides information about various breweries and beer varieties.
+
+# Group Breweries
+
+## Brewery Collection [/api/breweries]
+
+### List All Breweries [GET]
+
+List of all breweries.
+
++ Response 200 (application/json)
+
+        [
+            {   
+                "id": "integer id for brewery",
+                "name": "Adelbert’s Brewery",
+                "established": "2011",
+                "isOrganic": "N",
+                "website": "http://www.adelbertsbeer.com/",
+                "description": "",
+                "image": "https://s3.amazonaws.com/brewerydbapi/brewery/7Tjp4C/upload_UUm4SE-medium.png"
+            },
+            {   
+                "id": "integer id for brewery",
+                "name": "Ship Bottom Brewery",
+                "established": "2011",
+                "isOrganic": "N",
+                "website": "http://www.shipbottombrewery.com/",
+                "description": "",
+                "image": "https://s3.amazonaws.com/brewerydbapi/brewery/qa1QZU/upload_GVsNmq-medium.png"
+            }
+        ]
+
+## Brewery [/api/breweries/{id}]
+
++ Parameters
+    + id (id) - ID of brewery
+
+### Brewery [GET]
+
+Details of a single brewery.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "integer id for brewery",
+                "name": "Adelbert’s Brewery",
+                "established": "2011",
+                "isOrganic": "N",
+                "website": "http://www.adelbertsbeer.com/",
+                "description": "",
+                "image": "https://s3.amazonaws.com/brewerydbapi/brewery/7Tjp4C/upload_UUm4SE-medium.png"
+            }
+        ]
+
+# Group Beers
+
+## Beers Collection [/api/beers]
+
+### List All Beers [GET]
+
+List of all beers.
+
++ Response 200 (application/json)
+
+        [
+            {   
+                "id": "integer id for beer",
+                "name": "Black Rhino",
+                "style": "Dark American-Belgo-Style Ale",
+                "brewery": "Adelbert's Brewery",
+                "description": "",
+                "isOrganic": "N",
+                "abv": "5.6",
+                "ibu": "35",
+                "availability": "Year Round",
+                "image": "https://s3.amazonaws.com/brewerydbapi/beer/gdpm0V/upload_8Q0nrm-medium.png"
+            },
+            {   
+                "id": "integer id for beer",
+                "name": "Beach St. Wheat",
+                "style": "Light American Wheat Ale or Lager with Yeast",
+                "brewery": "Barrier Brewing Company",
+                "description": "",
+                "isOrganic": "N",
+                "abv": "5.1",
+                "ibu": "25",
+                "availability": "Seasonal",
+                "image": "https://s3.amazonaws.com/brewerydbapi/beer/UgfMbw/upload_TiYEKG-medium.png"
+            }
+        ]
+
+## Beer [/api/beers/{id}]
+
++ Parameters
+    + id (id) - ID of beer
+
+### Beer [GET]
+
+Details of a single beer.
+
++ Response 200 (application/json)
+
+        [
+            {   
+                "id": "integer id for beer",
+                "name": "Beach St. Wheat",
+                "style": "Light American Wheat Ale or Lager with Yeast",
+                "brewery": "Barrier Brewing Company",
+                "description": "",
+                "isOrganic": "N",
+                "abv": "5.1",
+                "ibu": "25",
+                "availability": "Seasonal",
+                "image": "https://s3.amazonaws.com/brewerydbapi/beer/UgfMbw/upload_TiYEKG-medium.png"
+            }
+        ]
